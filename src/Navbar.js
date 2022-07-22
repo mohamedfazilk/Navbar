@@ -4,7 +4,7 @@ import { links, social } from './data'
 import logo from './logo.svg'
 
 const Navbar = () => {
-    const [showLinks, setShowLinks] = useState(falsee);
+    const [showLinks, setShowLinks] = useState(false);
 
   return (
   <nav>
@@ -17,6 +17,8 @@ const Navbar = () => {
           </div>
 
           {/* // menu-icons */}
+          {showLinks &&
+          
           <div className="links-container show-container">
               <ul className="links">
                 {links.map((link)=>{
@@ -28,6 +30,7 @@ const Navbar = () => {
                 )})}
               </ul>
           </div>
+          }
 
           {/* //social-icons */}
         <ul className="social-icons">
