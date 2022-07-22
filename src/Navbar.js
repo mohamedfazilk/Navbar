@@ -7,6 +7,11 @@ const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false);
     const linkContainerRef = useRef(null);  //ref for the container
     const linkRef = useRef(null);            //ref for the links
+    useEffect(()=>{
+        const links = linkRef.current.getBoundingClientRect();  // return height values
+        console.log(links);
+
+    },[showLinks])
 
   return (
   <nav>
