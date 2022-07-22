@@ -4,13 +4,15 @@ import { links, social } from './data'
 import logo from './logo.svg'
 
 const Navbar = () => {
+    const [showLinks, setShowLinks] = useState(falsee);
+
   return (
   <nav>
       <div className="nav-center">
           <div className="nav-header">
               <img src={logo} alt="logo" />
               <button className='nav-toggle'>
-                  <FaBars/>
+                  <FaBars onClick={()=>setShowLinks(!showLinks)}/>
               </button>
           </div>
 
