@@ -13,49 +13,33 @@ const Navbar = () => {
                   <FaBars/>
               </button>
           </div>
+
+          {/* // menu-icons */}
           <div className="links-container show-container">
               <ul className="links">
-              <li>
-                <a href="#">Home</a>
-
-            </li>
-
-            <li>
-                <a href="#">About</a>
-
-            </li>
-
-            <li>
-                <a href="#">Contact</a>
-
-            </li>
-
-            <li>
-                <a href="#">Products</a>
-
-            </li>
-
+                {links.map((link)=>{
+                    const{id,url,text} = link
+                    return( 
+                    <li key={id}>
+                        <a href={url}>{text}</a>
+                    </li>
+                )})}
               </ul>
           </div>
+
+          {/* //social-icons */}
         <ul className="social-icons">
-            <li>
-                <a href="http://twitter.com">
+            {social.map((sociali)=>{
+                const {id,url,icon} = sociali
+                return (
+            <li key={id}>
+                <a href={url}>
                     <FaTwitter/>
                 </a>
-            </li>
+                </li>
 
-            <li>
-                <a href="http://twitter.com">
-                    <FaTwitter/>
-                </a>
-            </li>
-
-
-            <li>
-                <a href="http://twitter.com">
-                    <FaTwitter/>
-                </a>
-            </li>
+                )
+            })}
         </ul>
       </div>
   </nav>
